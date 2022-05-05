@@ -2,26 +2,11 @@
 // un div avrà il testo colorato di rosso mentre l’altro di verde.
 // Partendo da un array di numeri, stampiamo nell’id rosso i numeri dispari e in verde i numeri pari.
 
-// 1. creo due div con id diversi e con stile diverso
-let red = document.createElement("div");
-red.id = "red";
-red.style.color ="red";
-console.log(red);
-
-let green = document.createElement("div");
-green.id = "green";
-green.style.color ="green";
-console.log(green);
-
-// 2. li appendo all'HTML
+// 1. salvo due div che mi serviranno dopo in delle variabili
 let oddList = document.querySelector("div.odd");
-oddList.append(red);
-
 let evenList = document.querySelector("div.even");
-evenList.append(green);
 
-
-// 3. creo un array vuoto e lo popolo con numeri casuali
+// 2. creo un array vuoto e lo popolo con numeri casuali
 let array = [];
 console.log(array);
 
@@ -31,12 +16,21 @@ for (let i = 0; i < 10; i++) {
 }
 console.log(array);
 
-// 4. scorro array con un ciclo. SE il numero incontrato è pari, lo stampo nel div #red, ALTRIMENTI SE è dispari, lo stampo nel div #green
+// 4. scorro array con un ciclo. SE il numero incontrato è dispari, lo stampo nel div #red, ALTRIMENTI SE è pari, lo stampo nel div #green
 for (let i = 0; i < array.length; i++) {
     if ((array[i] % 2) === 1) {
+        let red = document.createElement("div");
+        red.id = "red";
+        red.style.color ="red";
         red.innerText = array[i];
-    } else ((array[i] % 2) === 0); {
+        oddList.append(red);
+    } else ((array[i] % 2) === 1); {
+        let green = document.createElement("div");
+        green.id = "green";
+        green.style.color ="green";
         green.innerText = array[i];
+        evenList.append(green);
     }
 }
 
+// debugger;
