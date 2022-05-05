@@ -11,7 +11,6 @@ for (let i = 0; i < userNumber; i++) {
     for (let i = 0; i < 10; i++) {
         let randomNumber = Math.floor(Math.random() * 100) + 1;
         newArray.push(randomNumber);
-        debugger;
     }
     console.log(newArray);
 }
