@@ -15,7 +15,7 @@ while ( sum < 50) {
         let newNumber = Number(prompt("Ti ho detto un numero da 1 a 50!!!!"));
     } else {
         list.push(newNumber);
-        sum = sum + newNumber;
+        sum += newNumber;
         console.log(list, newNumber, sum);  
     }
 }
