@@ -24,12 +24,13 @@ for (let i = 0; i < array.length; i++) {
         red.style.color ="red";
         red.innerText = array[i];
         oddList.append(red);
-    } else ((array[i] % 2) === 1); {
+    } else if ((array[i] % 2) === 0) {
         let green = document.createElement("div");
         green.id = "green";
         green.style.color ="green";
         green.innerText = array[i];
         evenList.append(green);
+    } else {
     }
 }
 
