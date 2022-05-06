@@ -2,7 +2,12 @@
 // Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100. Ogni volta che ne crei uno, stampalo a schermo.
 
 // 1. faccio inserire un numero all'utente
-let userNumber = Number(prompt("Inserisci un numero"));
+let userNumber;
+
+do {
+    userNumber = Number(prompt("Inserisci un numero"));
+} while (isNaN(userNumber))
+
 console.log(userNumber);
 
 // 2. genero tanti array quanto è il valore di userNumber, ognuno formato da 10 numeri casuali tra 1 e 100. Ogni volta che ne creo uno, lo stampo
